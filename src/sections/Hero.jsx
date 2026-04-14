@@ -69,7 +69,7 @@ const Hero = () => {
             className="text-2xl md:text-3xl font-display font-bold text-accent mb-6 h-[32px] md:h-[40px]"
           >
             <Typewriter 
-              words={['UI Designer', 'React Developer', 'Frontend Developer', 'Full Stack Developer']}
+              words={['React Developer', 'Frontend Developer', 'Full Stack Developer']}
               loop={true}
               cursor
               cursorStyle='|'
