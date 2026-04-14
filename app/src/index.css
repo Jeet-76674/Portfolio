@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════
+   CSS VARIABLES — Design Tokens
+   ═══════════════════════════════════════════ */
+:root {
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #111111;
+  --bg-card: #181818;
+  --accent: #ff5533;
+  --accent-hover: #ff6644;
+  --text-primary: #ffffff;
+  --text-secondary: #999999;
+  --text-muted: #555555;
+  --border: rgba(255,255,255,0.06);
+  --glow: rgba(255,85,51,0.15);
+}
+
+/* ═══════════════ BASE RESET ═══════════════ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide default cursor on interactive elements */
+a, button, [role="button"], input, textarea, select, label {
+  cursor: none;
+}
+
+/* ═══════════════ SELECTION ═══════════════ */
+::selection {
+  background: var(--accent);
+  color: var(--bg-primary);
+}
+
+/* ═══════════════ SCROLLBAR ═══════════════ */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ═══════════════ UTILITY CLASSES ═══════════════ */
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, #ff8866 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* ═══════════ DOT GRID PATTERN ═══════════ */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ═══════════ SECTION OBSERVER ═══════════ */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children */
+.stagger-child {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-visible .stagger-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-visible .stagger-child:nth-child(1) { transition-delay: 0.1s; }
+.section-visible .stagger-child:nth-child(2) { transition-delay: 0.2s; }
+.section-visible .stagger-child:nth-child(3) { transition-delay: 0.3s; }
+.section-visible .stagger-child:nth-child(4) { transition-delay: 0.4s; }
+.section-visible .stagger-child:nth-child(5) { transition-delay: 0.5s; }
+.section-visible .stagger-child:nth-child(6) { transition-delay: 0.6s; }
+.section-visible .stagger-child:nth-child(7) { transition-delay: 0.7s; }
+.section-visible .stagger-child:nth-child(8) { transition-delay: 0.8s; }
+
+/* ═══════════ SKILL BAR ANIMATION ═══════════ */
+.skill-bar-fill {
+  width: 0%;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-visible .skill-bar-fill {
+  /* width set via inline style */
+}
+
+/* ═══════════ REDUCED MOTION ═══════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ═══════════ FLOATING LABEL INPUT ═══════════ */
+.float-label-group {
+  position: relative;
+}
+
+.float-label-group input,
+.float-label-group textarea {
+  width: 100%;
+  padding: 1rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333;
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.float-label-group input:focus,
+.float-label-group textarea:focus {
+  border-bottom-color: var(--accent);
+}
+
+.float-label-group label {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.float-label-group input:focus + label,
+.float-label-group input:not(:placeholder-shown) + label,
+.float-label-group textarea:focus + label,
+.float-label-group textarea:not(:placeholder-shown) + label {
+  top: -0.75rem;
+  font-size: 0.75rem;
+  color: var(--accent);
+}

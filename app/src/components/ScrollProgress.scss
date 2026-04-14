@@ -1,0 +1,41 @@
+.scroll-progress {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 100px;
+  background: var(--color-border);
+  z-index: 100;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-accent);
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+
+  &__percentage {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover &__percentage {
+    opacity: 1;
+  }
+}
