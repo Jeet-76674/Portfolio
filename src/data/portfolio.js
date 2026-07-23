@@ -186,7 +186,7 @@ export const services = [
 ];
 
 export const stats = [
-  { value: '9.7', label: 'CGPA' },
-  { value: '2+', label: 'Projects' },
-  { value: '3+', label: 'Certifications' },
+  { value: '9.5', label: 'CGPA' },
+  { value: '5+', label: 'Projects' },
+  { value: '9+', label: 'Certifications' },
 ];
