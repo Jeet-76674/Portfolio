@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import CustomCursor from './components/CustomCursor'
 import ScrollProgress from './components/ScrollProgress'
 import Navigation from './sections/Navigation'
@@ -32,6 +33,9 @@ function App() {
 
       {/* Footer */}
       <Footer />
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   )
 }
