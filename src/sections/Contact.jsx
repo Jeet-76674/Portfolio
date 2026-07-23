@@ -22,6 +22,11 @@ const Contact = () => {
   const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
   const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
 
+  // Debugging: Check if environment variables are loaded
+  console.log("Service ID:", import.meta.env.VITE_EMAILJS_SERVICE_ID ? "Loaded" : "Missing");
+  console.log("Template ID:", import.meta.env.VITE_EMAILJS_TEMPLATE_ID ? "Loaded" : "Missing");
+  console.log("Public Key:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY ? "Loaded" : "Missing");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;

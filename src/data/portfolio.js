@@ -1,35 +1,38 @@
 export const personalInfo = {
   name: 'Jeet Tetar',
   initials: 'JT',
-  role: 'Aspiring Java Full Stack Developer',
-  bio: 'I am a Computer Science student focused on building responsive and user-friendly web applications using HTML, CSS, JavaScript, and React. Currently learning Java Full Stack development to strengthen my backend skills, with a future goal of exploring DevOps and AWS.',
+  role: 'Java Full Stack Developer',
+  bio: 'Java Full Stack Developer specializing in designing and developing scalable, high-performance web applications using Core Java, Spring Boot, Hibernate, React, JavaScript, and MySQL. Passionate about building robust backend systems, RESTful APIs, and delivering efficient, maintainable software solutions.',
   email: 'ntetar@gmail.com',
   location: 'Ahmedabad, Gujarat, India',
   availability: 'Open to Internship & Job Opportunities',
   social: {
     github: 'https://github.com/Jeet-76674',
-    linkedin: 'https://www.linkedin.com/in/jeet-tetar-5196b2312',
+    linkedin: 'https://www.linkedin.com/in/jeet-tetar',
   },
 };
 
 export const highlights = [
-  "🎓 CGPA: 9.7",
+  "🎓 CGPA: 9.5",
   "📜 NSDC Certified",
-  "💻 Java Full Stack Developer (In Progress)",
+  "💻 Java Full Stack Developer",
   "🚀 Open to Internship & Job Opportunities",
 ];
 
 export const skills = [
-  { name: 'HTML', pct: 100 },
-  { name: 'CSS', pct: 95 },
-  { name: 'Bootstrap', pct: 100 },
-  { name: 'JavaScript', pct: 90 },
-  { name: 'React', pct: 85 },
-  { name: 'SQL', pct: 100 },
+  { name: 'Core Java', pct: 100 },
+  { name: 'Spring Boot', pct: 90 },
+  { name: 'Hibernate & JPA', pct: 90 },
+  { name: 'REST APIs', pct: 100 },
+  { name: 'Spring Security', pct: 90 },
   { name: 'MySQL', pct: 100 },
-  { name: 'REST API', pct: 75 },
-  { name: 'Git', pct: 75 },
+  { name: 'React.js', pct: 100 },
+  { name: 'JavaScript', pct: 100 },
+  { name: 'Git', pct: 100 },
   { name: 'GitHub', pct: 100 },
+  { name: 'HTML', pct: 100 },
+  { name: 'CSS', pct: 100 },
+  { name: 'Bootstrap', pct: 100 },
 ];
 
 export const projects = [
@@ -59,11 +62,28 @@ export const projects = [
 
 export const experience = [
   {
-    period: '2024 – Present',
-    role: 'Aspiring Full Stack Developer',
-    company: 'Self Learning',
-    description: 'Learning Java Full Stack Development and building real-world projects using React and modern web technologies. Continuously improving problem-solving and development skills.',
-    tags: ['Java', 'React', 'JavaScript'],
+    period: 'Jun 2024 – Nov 2025',
+    role: 'Software Development Trainee',
+    company: 'Tops Technologies',
+    description:
+      'Built a strong programming foundation through hands-on training in C, C++, Python, HTML, CSS, JavaScript, SQL, and Machine Learning while developing academic and practical projects.',
+    tags: ['C', 'C++', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Python', 'Machine Learning'],
+  },
+  {
+    period: 'Dec 2025 – Jun 2026',
+    role: 'Java Full Stack Trainee',
+    company: 'ITVedant',
+    description:
+      'Completed intensive Java Full Stack training with hands-on development using Core Java, Spring Boot, Hibernate, JPA, Spring Security, React.js, REST APIs, MySQL, and Git through real-world projects.',
+    tags: ['Core Java', 'Spring Boot', 'Hibernate & JPA', 'Spring Security', 'React.js', 'MySQL'],
+  },
+  {
+    period: 'Jul 2026 – Present',
+    role: 'Software Development Intern',
+    company: 'Axgenius Innovations LLP',
+    description:
+      'Developing scalable web applications, REST APIs, and automation solutions using FastAPI, React, SQLAlchemy, MySQL, Git, and modern software development practices in a collaborative development environment.',
+    tags: ['FastAPI', 'React', 'SQLAlchemy', 'MySQL', 'Git'],
   },
 ];
 
@@ -145,23 +165,23 @@ export const navLinks = [
 export const services = [
   {
     num: '01',
-    title: 'Web Development',
-    desc: 'Building responsive and user-friendly web applications using modern technologies.',
+    title: 'Full Stack Development',
+    desc: 'Building scalable web applications using Java, Spring Boot, React, and MySQL.',
   },
   {
     num: '02',
-    title: 'Frontend Development',
-    desc: 'Creating interactive interfaces using React and JavaScript.',
+    title: 'Java Backend Development',
+    desc: 'Developing secure backend services with Spring Boot, Hibernate, and REST APIs.',
   },
   {
     num: '03',
-    title: 'Learning Full Stack',
-    desc: 'Currently learning Java Full Stack development to grow as a complete developer.',
+    title: 'Frontend Development',
+    desc: 'Creating responsive user interfaces with React, JavaScript, HTML, and CSS.',
   },
   {
     num: '04',
-    title: 'Problem Solving',
-    desc: 'Improving logical thinking and coding skills through consistent practice.',
+    title: 'Database Management',
+    desc: 'Designing and managing MySQL databases with SQL and Hibernate.',
   },
 ];
 

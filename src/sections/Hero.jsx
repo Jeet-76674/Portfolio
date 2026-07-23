@@ -22,8 +22,8 @@ const Hero = () => {
   }, [])
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       ref={containerRef}
       className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-bg-primary dot-grid-bg"
     >
@@ -35,11 +35,11 @@ const Hero = () => {
       </div>
 
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 relative z-10">
-        
+
         {/* Left Column - Content */}
         <div className="col-span-1 lg:col-span-7 flex flex-col justify-center">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -53,7 +53,7 @@ const Hero = () => {
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -62,14 +62,14 @@ const Hero = () => {
             {personalInfo.name}
           </motion.h1>
 
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-2xl md:text-3xl font-display font-bold text-accent mb-6 h-[32px] md:h-[40px]"
           >
-            <Typewriter 
-              words={['React Developer', 'Frontend Developer', 'Full Stack Developer']}
+            <Typewriter
+              words={['Java Full Stack Developer', 'Software Developer', 'React Developer']}
               loop={true}
               cursor
               cursorStyle='|'
@@ -79,7 +79,7 @@ const Hero = () => {
             />
           </motion.h2>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -88,13 +88,13 @@ const Hero = () => {
             {personalInfo.bio}
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-wrap items-center gap-5 mb-14"
           >
-            <a 
+            <a
               href="#projects"
               className="px-8 py-4 bg-accent hover:bg-accent-hover text-bg-primary font-bold text-sm tracking-wider uppercase rounded-full transition-all flex items-center gap-2 group hover:shadow-[0_0_30px_rgba(255,85,51,0.3)] hover:-translate-y-1"
             >
@@ -104,8 +104,8 @@ const Hero = () => {
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            
-            <a 
+
+            <a
               href="#contact"
               className="px-8 py-4 bg-transparent border border-white/20 hover:border-accent text-white hover:text-accent font-bold text-sm tracking-wider uppercase rounded-full transition-all flex items-center gap-2 group hover:-translate-y-1 hover:bg-accent/5"
             >
@@ -122,14 +122,14 @@ const Hero = () => {
           </motion.div>
 
           {/* Stats Row */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, border: 'none' }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
             className="flex items-center gap-8 md:gap-14 pt-8 border-t border-white/10"
           >
             {stats.map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -145,7 +145,7 @@ const Hero = () => {
         </div>
 
         {/* Right Column - Visual */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
@@ -156,19 +156,19 @@ const Hero = () => {
             {/* Outline ring */}
             <div className="absolute inset-0 rounded-full border border-white/10 animate-[spin_20s_linear_infinite]" />
             <div className="absolute inset-4 rounded-full border border-accent/20 animate-[spin_15s_linear_infinite_reverse]" />
-            
+
             {/* Hexagon/Circle Image */}
             <div className="absolute inset-[10%] rounded-full overflow-hidden bg-bg-card border border-white/5 relative group">
-               {/* 
+              {/* 
                  For a real production site, use standard object-cover. 
                  Using the provided person image with a subtle scale effect.
                */}
-               <img 
-                 src="/hero-person.png" 
-                 alt={personalInfo.name} 
-                 className="w-full h-full object-contain filter drop-shadow-[0_0_30px_rgba(255,85,51,0.2)]" 
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent opacity-60" />
+              <img
+                src="/hero-person.png"
+                alt={personalInfo.name}
+                className="w-full h-full object-contain filter drop-shadow-[0_0_30px_rgba(255,85,51,0.2)]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-bg-primary via-transparent to-transparent opacity-60" />
             </div>
 
           </div>
