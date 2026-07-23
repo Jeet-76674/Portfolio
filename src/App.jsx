@@ -9,6 +9,7 @@ import Experience from './sections/Experience'
 import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <CustomCursor />
       <ScrollProgress />
       <Navigation />
+      <Analytics />
 
       {/* Main page content sections */}
       <main>
