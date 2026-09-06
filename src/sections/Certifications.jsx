@@ -259,10 +259,18 @@ const CertModal = ({ cert, isOpen, onClose, onNext, onPrev }) => {
 
 const Certifications = () => {
   const [activeCert, setActiveCert] = useState(null)
-  
-  const sortedCerts = [...certifications].sort((a, b) => 
-    a.status === 'completed' ? -1 : 1
-  )
+
+  const certificationPriority = [5, 3]
+  const sortedCerts = [...certifications].sort((a, b) => {
+    const priorityA = certificationPriority.indexOf(a.id)
+    const priorityB = certificationPriority.indexOf(b.id)
+    const orderA = priorityA === -1 ? certificationPriority.length : priorityA
+    const orderB = priorityB === -1 ? certificationPriority.length : priorityB
+
+    if (orderA !== orderB) return orderA - orderB
+    if (a.status !== b.status) return a.status === 'completed' ? -1 : 1
+    return 0
+  })
 
   const handleOpenModal = (index) => {
     setActiveCert(sortedCerts[index])

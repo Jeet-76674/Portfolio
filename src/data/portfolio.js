@@ -37,6 +37,17 @@ export const skills = [
 
 export const projects = [
   {
+    id: 3,
+    title: 'Placement & Recruitment Management System',
+    category: 'WEB APP',
+    description: 'A full-stack placement platform that connects students, recruiters, and administrators through secure, role-based recruitment workflows for jobs, applications, interviews, and placement tracking.',
+    image: '/prms image.png',
+    tech: ['Java', 'Spring Boot', 'Spring Security', 'REST APIs', 'MySQL', 'React'],
+    year: '2026',
+    github: 'https://github.com/Jeet-76674/prms-public-demo',
+    liveUrl: 'https://prms-public-demo.vercel.app/',
+  },
+  {
     id: 1,
     title: 'Weather App',
     category: 'WEB APP',
@@ -89,6 +100,30 @@ export const experience = [
 
 export const certifications = [
   {
+    id: 5,
+    title: 'Java IBM Master Certification',
+    issuer: 'IBM',
+    date: '2026',
+    status: 'completed',
+    description: 'Completed IBM certification focused on Java and modern full stack development skills.',
+    color: '#4285f4',
+    icon: '📘',
+    image: '/IBM MASTER.jpeg',
+    credentialUrl: 'https://itvedant.skillsnetwork.site/certificates/d3743a37-92bc-4d63-8984-fe2c6ad555ba',
+  },
+  {
+    id: 3,
+    title: 'Java Full Stack Development',
+    issuer: 'ITVedant',
+    date: '2026',
+    status: 'completed',
+    description: 'Completed Java Full Stack Development training with Spring Boot, Hibernate, React, REST APIs, and MySQL.',
+    color: '#f0db4f',
+    icon: '☕',
+    image: '/ITV_FulllStack.jpg',
+    credentialUrl: 'https://wingz.itvedant.com/site/verify-certificate?id=MzU0NDI%3D',
+  },
+  {
     id: 1,
     title: 'Web Technologies Certification',
     issuer: 'NSDC',
@@ -112,16 +147,6 @@ export const certifications = [
     image: '/tops-masterInComputerScience.png',
   },
   {
-    id: 3,
-    title: 'Java Full Stack Development',
-    issuer: 'ITVedant',
-    date: 'In Progress',
-    status: 'inprogress',
-    description: 'Currently learning Java, Spring Boot, Hibernate, and full stack development concepts.',
-    color: '#f0db4f',
-    icon: '☕',
-  },
-  {
     id: 4,
     title: 'NSDC Certification (Full Stack)',
     issuer: 'NSDC',
@@ -130,16 +155,6 @@ export const certifications = [
     description: 'Pursuing government-recognized certification in full stack development.',
     color: '#00c853',
     icon: '🏆',
-  },
-  {
-    id: 5,
-    title: 'IBM Certification (Full Stack)',
-    issuer: 'IBM',
-    date: 'In Progress',
-    status: 'inprogress',
-    description: 'Pursuing industry certification focused on modern full stack development.',
-    color: '#4285f4',
-    icon: '📘',
   },
 ];
 
